@@ -1,4 +1,12 @@
 class IslandsController < ApplicationController
+  def index
+    @islands = Island.All
+  end
+
+  def show
+    @island = Island.find(params[:id])
+  end
+  
   def new
     @owner = User.find(params[:user_id])
     @new_island = Island.new
