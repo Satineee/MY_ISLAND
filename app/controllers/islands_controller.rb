@@ -6,17 +6,20 @@ class IslandsController < ApplicationController
 
   def show
     @island = Island.find(params[:id])
+    authorize @island
   end
-  
+
   def new
     @owner = User.find(params[:user_id])
     @new_island = Island.new
+    authorize @new_island
   end
 
   def create
     @owner = User.find(params[:user_id])
     @new_island = Island.new(island_params)
     @new_island.user = @owner
+    authorize @new_island
     if @new_island.save
       redirect_to island_path(@new_island)
     else
