@@ -3,7 +3,7 @@
     <h1>Islands</h1>
     <div>
         <% @islands.each do |island| %>
-            <li><%= island.name %> : <%= island.location %></li>
+            <li><%= link_to island.name, island_path(island) %> : <%= island.location %></li>
         <% end %>
     </div>
 </div>
