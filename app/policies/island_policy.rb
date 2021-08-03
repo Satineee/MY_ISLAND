@@ -6,7 +6,11 @@ class IslandPolicy < ApplicationPolicy
   end
 
   def create?
-    return true
+    true
+  end
+
+  def update?
+    record.user == user
   end
 
   def show?
@@ -15,5 +19,9 @@ class IslandPolicy < ApplicationPolicy
 
   def index?
     true
+  end
+
+  def destroy?
+    record.user == user
   end
 end

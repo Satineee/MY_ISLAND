@@ -3,10 +3,14 @@
 </div>
 
 <div class="container">
-	<h1>Islands</h1>
+	<div class="islands-bar d-flex justify-content-between">
+	  <h1>Islands</h1>
+	</div>
 	<div>
-		<% @islands.each do |island| %>
-			<li><%= link_to island.name, island_path(island) %> : <%= island.location %></li>
-		<% end %>
+		<ul>
+		  <% @islands.each do |island| %>
+		  	<li><%= link_to island.name, island_path(island) %> : <%= island.location %></li>
+		  <% end %>
+		</ul>
 	</div>
 </div>
