@@ -5,10 +5,16 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
+  def show
+    @booking = Booking.find(params[:id])
+    authorize @booking
+  end
+
   def new
     @island = Island.find(params[:island_id])
     @user = current_user
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
@@ -17,14 +23,20 @@ class BookingsController < ApplicationController
     @user = current_user
     @booking.island = @island
     @booking.user = @user
+    @booking.total_price = find_price.to_i * @island.price
+    authorize @booking
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to island_booking_path(@island, @booking)
     else
       render :new
     end
   end
 
   private
+
+  def find_price
+    Date.parse(booking_params[:end_date]) - Date.parse(booking_params[:start_date])
+  end
 
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :island_id)

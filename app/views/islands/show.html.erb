@@ -1,20 +1,12 @@
 <div class="container">
+  <h1> Island Name:  <%= @island.name %> </h1>
 
-<h1>
-Island Name:  <%= @island.name %>
-</h1>
-
-<p>
-  Island Location: <%= @island.location %>
-</p>
-<p>
-  Island Price: <%= @island.price %>€
-</p>
-<p>
-  Island Description: <%= @island.description%>
-</p>
-<%= link_to 'Back', islands_path %> |
-<%= link_to 'Book now!', new_island_booking_path(@island), class: "btn btn-primary" %>
+  <p> Island Location: <%= @island.location %> </p>
+  <p> Island Price: <%= @island.price %>€ </p>
+  <p> Island Description: <%= @island.description%> </p>
+  <%= link_to 'Back', islands_path %> |
+  
+  <%= link_to 'Book now!', new_island_booking_path(@island), class: "btn btn-primary" %>
 </div>
 
  
