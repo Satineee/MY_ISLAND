@@ -1,7 +1,9 @@
 class IslandsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
-    @islands = Island.all
+    # @islands = Island.all
+    @islands = policy_scope(Island).order(created_at: :desc)
   end
 
   def show

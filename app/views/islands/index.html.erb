@@ -1,0 +1,9 @@
+
+<div class="container">
+    <h1>Islands</h1>
+    <div>
+        <% @islands.each do |island| %>
+            <li><%= island.name %> : <%= island.location %></li>
+        <% end %>
+    </div>
+</div>
