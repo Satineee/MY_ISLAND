@@ -6,7 +6,11 @@ class IslandPolicy < ApplicationPolicy
   end
 
   def create?
-    return true
+    true
+  end
+
+  def update?
+    true
   end
 
   def show?
@@ -14,6 +18,10 @@ class IslandPolicy < ApplicationPolicy
   end
 
   def index?
+    true
+  end
+
+  def destroy?
     true
   end
 end
