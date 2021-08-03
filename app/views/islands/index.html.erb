@@ -1,9 +1,12 @@
+<div class="home-banner">
+  <h1>MY ISLAND</h1>
+</div>
 
 <div class="container">
-    <h1>Islands</h1>
-    <div>
-        <% @islands.each do |island| %>
-            <li><%= link_to island.name, island_path(island) %> : <%= island.location %></li>
-        <% end %>
-    </div>
+	<h1>Islands</h1>
+	<div>
+		<% @islands.each do |island| %>
+			<li><%= link_to island.name, island_path(island) %> : <%= island.location %></li>
+		<% end %>
+	</div>
 </div>
