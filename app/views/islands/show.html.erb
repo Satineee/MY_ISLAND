@@ -13,8 +13,12 @@ Island Name:  <%= @island.name %>
 <p>
   Island Description: <%= @island.description%>
 </p>
-<%= link_to 'Back', islands_path %> |
+
+<%= link_to 'Delete', island_path(@island), method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-danger" %> | <%= link_to 'edit', edit_island_path(@island), class: 'btn btn-primary' %>
+<%= link_to 'Home page', islands_path %> |
+
 <%= link_to 'Book now!', new_island_booking_path(@island), class: "btn btn-primary" %>
+
 </div>
 
  

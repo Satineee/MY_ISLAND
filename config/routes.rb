@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   authenticated :user do
-    resources :islands, only: [:new, :create, :edit, :update, :delete] do
+    resources :islands, only: [:new, :create, :edit, :update, :destroy] do
       resources :bookings, only: [:index, :show, :new, :create]
     end
   end
 
   resources :islands, only: [:index, :show]
+  get '/users/:id', to: 'users#show', as: :user
 end

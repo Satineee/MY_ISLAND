@@ -1,0 +1,16 @@
+<div class="container">
+
+<div class="d-flex justify-content-between">
+  <h1>My islands !</h1>
+  <%= link_to 'Add an island', new_island_path, class: 'btn btn-primary' %>
+</div>
+
+<div class="card">
+  <% @islands.each do |island| %>
+    <li><%= link_to island.name, island_path(island) %> : <%= island.location %></li>
+  <% end %>
+</div>
+<%= link_to 'Back', islands_path %> |
+</div>
+
+ 
