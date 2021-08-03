@@ -1,18 +1,9 @@
 <div class="container">
+  <h1> Island Name:  <%= @island.name %> </h1>
 
-  <h1>
-    Island Name:  <%= @island.name %>
-  </h1>
-
-  <p>
-    Island Location: <%= @island.location %>
-  </p>
-  <p>
-    Island Price: <%= @island.price %>€
-  </p>
-  <p>
-    Island Description: <%= @island.description%>
-  </p>
+  <p> Island Location: <%= @island.location %> </p>
+  <p> Island Price: <%= @island.price %>€ </p>
+  <p> Island Description: <%= @island.description%> </p>
 
   <% if policy(@island).edit? %>
     <%= link_to 'Delete', island_path(@island), method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-danger" %> | <%= link_to 'edit', edit_island_path(@island), class: 'btn btn-primary' %> |
@@ -23,5 +14,3 @@
   <% end %> 
 
 </div>
-
- 
