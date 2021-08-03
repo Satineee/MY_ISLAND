@@ -10,7 +10,7 @@ class IslandPolicy < ApplicationPolicy
   end
 
   def update?
-    true
+    record.user == user
   end
 
   def show?
@@ -22,6 +22,6 @@ class IslandPolicy < ApplicationPolicy
   end
 
   def destroy?
-    true
+    record.user == user
   end
 end
