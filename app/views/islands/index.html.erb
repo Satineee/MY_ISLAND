@@ -2,22 +2,40 @@
   <h1>MY ISLAND</h1>
 </div>
 
-<div class="container">
-	<div class="islands-bar d-flex justify-content-between">
-	  <h1>Islands</h1>
+<div class="container-island">
+  <div class="row">
+    <div class="col-sm-7">
+		<div class="islands-bar d-flex justify-content-between">
+		<h1>Islands</h1>
+		</div>
+		<div>
+			<% @islands.each do |island| %>
+				<%= link_to island_path(island), class:'text-decoration-none' do %>
+					<div class="card-island d-flex">
+						<div class="mr-4">
+							<% if island.photo.attached? %>
+								<%= cl_image_tag island.photo.key, height: 200, width: 300, crop: :fill, class: 'img' %>
+							<% end %>
+						</div>
+						<div class="pl-4 pt-2">
+						  <ul>
+							<span class="text-location"><%= island.name %></span>
+						  </ul>
+						  <ul>
+							<span class="text-location"><%= island.location %></span>
+						  </ul>
+						</div>
+					</div>
+				<% end %>
+			<% end %>
+		</div>
 	</div>
-	<div>
-		<ul>
-		  <% @islands.each do |island| %>
-		  	<li><%= link_to island.name, island_path(island) %> : <%= island.location %></li>
-		  <% end %>
-		</ul>
+    <div class="col-lg-5">
+		<div id="map"
+		style="width: 620px; height: 100vh;"
+		data-markers="<%= @markers.to_json %>"
+		data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+		</div>
 	</div>
-
-	<div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-	</div>
-	
+  </div>
 </div>
