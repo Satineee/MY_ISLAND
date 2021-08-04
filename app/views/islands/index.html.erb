@@ -1,17 +1,14 @@
 <div class="home-banner">
-  <h1>MY ISLAND</h1>
+  <h1 class='title'>All Islands</h1>
 </div>
 
 <div class="container-island">
   <div class="row">
     <div class="col-sm-7">
-		<div class="islands-bar d-flex justify-content-between">
-		<h1>Islands</h1>
-		</div>
 		<div>
 			<% @islands.each do |island| %>
 				<%= link_to island_path(island), class:'text-decoration-none' do %>
-					<div class="card-island d-flex">
+					<div class="card-island d-flex mt-5">
 						<div class="mr-4">
 							<% if island.photo.attached? %>
 								<%= cl_image_tag island.photo.key, height: 200, width: 300, crop: :fill, class: 'img' %>
