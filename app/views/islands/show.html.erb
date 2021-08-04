@@ -1,19 +1,54 @@
 <div class="container">
-  <h1> Island Name:  <%= @island.name %> </h1>
 
-  <% if @island.photo.attached? %>
-    <%= cl_image_tag @island.photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
-  <p> Island Location: <%= @island.location %> </p>
-  <p> Island Price: <%= @island.price %>€ </p>
-  <p> Island Description: <%= @island.description%> </p>
+  <div class="header">
+    <h2> <%= @island.name %> </h2>
+    <div class="info d-flex justify-content-between">
+      <div class="info-left">
+        <i class="fas fa-star"></i> <%= rand(3..5) %> | <%= @island.location %>
+      </div>
+      <div class="info-right">
+        <i class="far fa-share-square"></i> Share | <i class="far fa-heart"></i> Save
+      </div>
+    </div>
+  </div>
 
-  <% if policy(@island).edit? %>
-    <%= link_to 'Delete', island_path(@island), method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-danger" %> | <%= link_to 'edit', edit_island_path(@island), class: 'btn btn-primary' %> |
-    <%= link_to 'back', user_path(current_user), class: 'text-decoration-none' %>
-  <% else %>
-    <%= link_to 'Book now!', new_island_booking_path(@island), class: "btn btn-primary" %> |
-    <%= link_to 'All Islands page', islands_path %> |
-  <% end %> 
+  <div class="pictures d-flex">
+    <div class="main-picture">
 
+      <% if @island.photo.attached? %>
+        <%= cl_image_tag @island.photo.key, height: 300, width: 400, crop: :fill %>
+      <% else %>
+        <%= image_tag("Bora.jpeg",
+        width: 400, height: 300, crop: :fill) %>
+      <% end %>
+
+    </div>
+
+    <div class="secondary-pictures ">
+      <%= image_tag("bora-2.jpeg",
+      width: 400, height: 140, crop: :fill, class: 'secondary-p-up') %>
+      <%= image_tag("bora-3.jpeg",
+      width: 400, height: 140, crop: :fill, class: 'secondary-p-down') %>
+    </div>
+  </div>
+
+  <div class="secondary d-flex">
+
+    <div class="left">
+      <p> Island Location: <%= @island.location %> </p>
+      <p> Island Price: <%= @island.price %>€ </p>
+      <p> Island Description: <%= @island.description%> </p>
+    </div>
+
+    <div class="right card m-3">
+      <% if policy(@island).edit? %>
+        <%= link_to 'Delete', island_path(@island), method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-danger" %> | <%= link_to 'edit', edit_island_path(@island), class: 'btn btn-primary' %>
+        <%= link_to 'back', user_path(current_user), class: 'text-decoration-none' %>
+      <% else %>
+        <%= link_to 'Book now!', new_island_booking_path(@island), class: "btn btn-primary" %>
+        <%= link_to 'All Islands', islands_path, class: 'btn btn' %>
+      <% end %> 
+    </div>
+  </div>
 </div>
+
