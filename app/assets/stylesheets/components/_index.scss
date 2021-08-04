@@ -4,3 +4,31 @@
 @import "navbar";
 @import "banner";
 @import "map";
+
+#map {
+    position: sticky;
+    top: 0;
+}
+
+.container-island {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 60px;
+}
+
+.card-island {
+    padding: 20px;
+    background-color: rgb(253, 248, 239);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.text-location {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: black;
+}
+
+.img {
+    border-radius: 10px;
+}
