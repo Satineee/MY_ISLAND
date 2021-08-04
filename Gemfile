@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 # Use Active Storage variant
+gem 'cloudinary', '~> 1.16.0'
 # gem 'image_processing', '~> 1.2'
 gem 'pundit'
 # Reduces boot times through caching; required in config/boot.rb
