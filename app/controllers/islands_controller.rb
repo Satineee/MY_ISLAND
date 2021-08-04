@@ -54,6 +54,6 @@ class IslandsController < ApplicationController
   private
 
   def island_params
-    params.require(:island).permit(:name, :price, :location, :description)
+    params.require(:island).permit(:name, :price, :location, :description,  :photo)
   end
 end

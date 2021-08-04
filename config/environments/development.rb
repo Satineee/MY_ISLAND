@@ -54,7 +54,7 @@ Rails.application.configure do
   config.assets.quiet = true
 
 
-
+  config.active_storage.service = :cloudinary
   #aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 
