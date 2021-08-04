@@ -11,7 +11,10 @@ require 'faker'
   user = User.new(email: Faker::Internet.email, password: 'azerty')
   user.save
     10.times{
-	  island = Island.new(name: Faker::Movies::LordOfTheRings.location, location: Faker::Address.country, price: rand(1099..16000), description: Faker::ChuckNorris.fact)
+	  island = Island.new(name: Faker::Movies::LordOfTheRings.location, 
+                        location: Faker::Address.country, 
+                        price: rand(1099..16000), 
+                        description: Faker::ChuckNorris.fact)
       island.user = user
       island.save
   }
