@@ -1,7 +1,7 @@
 <div class="container">
   <h1> Island Name:  <%= @island.name %> </h1>
 
-  <% if cl_image_tag @island.photo%>
+  <% if @island.photo.attached? %>
     <%= cl_image_tag @island.photo.key, height: 300, width: 400, crop: :fill %>
   <% end %>
   <p> Island Location: <%= @island.location %> </p>
