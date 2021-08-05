@@ -2,8 +2,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 36px;
-  padding: 25px;
-  left: 40px;
+  width: 100%;
+  margin: 5% auto;
+  
 }
 .card-category-region {
   background-size: cover;

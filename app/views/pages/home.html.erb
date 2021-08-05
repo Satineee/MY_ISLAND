@@ -8,16 +8,20 @@
 <#% end %>
 </div>
  -->
- <div id="bannerhomepage" class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://images.pexels.com/photos/164041/pexels-photo-164041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)">
-    <h1 class="position-absolute"> Louez des iles entieres <br>
-        pour des experiences inoubliables!<br>
-        <button type="button" class="btn btn-light"> <%= link_to 'All Islands', islands_path, style:"font-size:30px;" %></button> 
+ <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/164041/pexels-photo-164041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+  <div class="container"> 
+     <h1> Louez des iles entieres <br>
+        pour des experiences inoubliables!
     </h1> 
+        <button type="button" class="btn btn-light"> <%= link_to 'All Islands', islands_path, style:"font-size:30px;" %></button> 
+  </div> 
 </div>
 
+ <div class="container"> 
 <div id="explore" class="explore">
   <h1>Explore these regions </h1>
 </div> 
+
 
 <div id="cardregion" class="cardregion">
   <div class="card-category-region" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/3601450/pexels-photo-3601450.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)">
@@ -49,4 +53,6 @@
   </div>
 </div>
 
+
+</div>
 

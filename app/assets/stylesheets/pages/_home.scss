@@ -1,25 +1,8 @@
-// Specific CSS for your home-page
-
-  #carouselExampleInterval h1 {
-    z-index: 100; 
-    color: white;
-    position: absolute;
-    top: 60%;
-    left: 1%; 
-  }
-#bannerhomepage h1 {
-  z-index: 100; 
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 5%;
-}
-#explore h1 {
-  position: absolute;
-  left: 35px;
-  padding-top: 40px;
-
-}
-#cardregion {
-  padding-top: 120px;
+.home-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5% 10%;
 }
