@@ -1,0 +1,39 @@
+.user {
+  height: 70vh;
+  padding: 40px;
+}
+
+.user .info {
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+  margin-bottom: 30px;
+}
+
+.btn-user:hover {
+  color: grey;
+}
+
+#new_user {
+  margin-top: 50px;
+  width: 50vh;
+  margin-left: 200px;
+  .btn {
+    background-color: $turq;
+  }
+  .btn:hover {
+    background-color: $bitter;
+  }
+}
+
+.user-right .btn {
+  width: 40px;
+  &:hover {
+    color: grey;
+  }
+}
+
+.user-info .bookings {
+  height: 50px;
+  width: 100%;
+}

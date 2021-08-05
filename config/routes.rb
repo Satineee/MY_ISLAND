@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :islands, only: [:index, :show]
-  get '/users/:id', to: 'users#show', as: :user
+  get   '/users/:id',      to: 'users#show', as: :user
+  get   '/users/:id/edit', to: 'users#edit', as: :edit_user
+  patch '/users/:id',      to: 'users#update'
 end
