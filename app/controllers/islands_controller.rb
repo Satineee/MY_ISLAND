@@ -21,7 +21,12 @@ class IslandsController < ApplicationController
 
   def index
     # @islands = Island.all
-    @islands = policy_scope(Island).order(created_at: :desc)
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR location ILIKE :query"
+      @islands = policy_scope(Island).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @islands = policy_scope(Island).order(created_at: :desc)
+    end
 
     @markers = @islands.geocoded.map do |island|
       {
