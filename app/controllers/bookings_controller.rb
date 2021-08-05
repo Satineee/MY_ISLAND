@@ -24,6 +24,7 @@ class BookingsController < ApplicationController
     @booking.island = @island
     @booking.user = @user
     @booking.total_price = find_price.to_i * @island.price
+    @island.book = true
     authorize @booking
     if @booking.save
       redirect_to island_booking_path(@island, @booking)
