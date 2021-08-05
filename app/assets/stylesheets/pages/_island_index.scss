@@ -20,11 +20,13 @@
 .card-island {
     padding: 20px;
     background-color: rgb(253, 248, 239);
-    margin-bottom: 20px;
     border-radius: 10px;
-    border-bottom: solid;
 }
-
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .text-name {
     font-family:'Adobe Fan Heiti Std B', Adobe Fan Heiti Std B, monospace;
     font-size: 25px;

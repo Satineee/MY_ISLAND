@@ -1,43 +1,48 @@
+
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://maximumwallhd.com/wp-content/uploads/2015/07/fonds-ecran-ile-paradisique-12.jpg);">
   <div class="container">
     <%= link_to "Our destinations", islands_path, class:"text-decoration-none text-island"%>
   </div>
 </div>
 
+
 <div class="container-island">
-  <div class="row">
-    <div class="col-sm-8">
-		<div>
-			<% @islands.each do |island| %>
+	<div class="row">
+		<div class="col-sm-8 py-5">
+			<div class="cards">
+				<% @islands.each do |island| %>
 				<%= link_to island_path(island), class:'text-decoration-none' do %>
-					<div class="card-island d-flex mt-5">
+					<div class="card-island d-flex">
 						<div class="mr-4">
 							<% if island.photo.attached? %>
-								<%= cl_image_tag island.photo.key, height: 200, width: 300, crop: :fill, class: 'img' %>
+							<%= cl_image_tag island.photo.key, height: 200, width: 300, crop: :fill, class: 'img' %>
 							<% end %>
 						</div>
-						<div class="pl-4 pt-5">
-						  <ul>
-							<% if island.book == true %>
-							  <p>Book</p>
-							<% end %>
-							<strong><span class="text-name color-black"><%= island.name %></span></strong>
-						  </ul>
-						  <ul>
-							<span class="text-name color-black" id="text-location"><%= island.location %></span>
-						  </ul>
-						</div>
-					</div>
-				<% end %>
-			<% end %>
+
+							<div class="pl-4 pt-5">
+								<ul>
+								<strong><span class="text-name color-black"><%= island.name %></span></strong>
+								</ul>
+								<ul>
+								<span class="text-name color-black" id="text-location"><%= island.location %></span>
+								</ul>
+								<ul>
+								<span class="text-name color-red" id="review"></span>
+								</ul>
+							</div>
+				</div>
+					<% end %>
+					<% end %>
+			</div>
+				
 		</div>
+			<div class="col-lg-4 py-5">
+				<div id="map"
+				  class=""
+					style="height: 100vh;"
+					data-markers="<%= @markers.to_json %>"
+					data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+				</div>
+			</div>
 	</div>
-    <div class="col-lg-4">
-		<div id="map"
-		style="width: 600px; height: 100vh;"
-		data-markers="<%= @markers.to_json %>"
-		data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-		</div>
-	</div>
-  </div>
 </div>
