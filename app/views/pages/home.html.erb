@@ -8,47 +8,16 @@
 <#% end %>
 </div>
  -->
- <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+ <div id="bannerhomepage" class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://images.pexels.com/photos/164041/pexels-photo-164041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)">
     <h1 class="position-absolute"> Louez des iles entieres <br>
       pour des experiences inoubliables!<br>
-      <%= link_to 'All Islands', islands_path, style:"font-size:40px;" %>
+     <button type="button" class="btn btn-light"> <%= link_to 'All Islands', islands_path, style:"font-size:30px;" %></button> 
     </h1> 
-   
-    <div class="carousel-inner">
-       
-        <div class="carousel-item active" data-interval="10000">
-          <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%=image_path 'toto' %>) !important;">
-          
-          </div>
-        </div>
-            
-        <div class="carousel-item" data-interval="2000">
-          <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%=image_path 'toto 1' %>) !important;">
-          </div>
-        </div>
-              
-        <div class="carousel-item">
-          <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%=image_path 'toto 2' %>); !important">
-          </div>
-        </div>
-    </div>
-  
-  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
 
-<!--<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-6">
-      <%= link_to 'All Islands', islands_path, style:"font-size:40px;" %>
-    </div>
-  </div>
-</div>
--->
+<div id="explore" class="explore">
+<h1>Explore these regions </h1>
+</div> 
+ 
+
 
