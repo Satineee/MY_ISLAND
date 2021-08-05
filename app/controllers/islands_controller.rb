@@ -37,12 +37,13 @@ class IslandsController < ApplicationController
     @island = Island.find(params[:id])
     authorize @island
     @name = @island.user.email.split('@').first.capitalize
-    @rating = rand(3..5)
+    @rating = rand(3.0..5.0).round(1)
     @markers = @islands.geocoded.map do |island|
       {
         lat: island.latitude,
         lng: island.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { island: island })
+        info_window: render_to_string(partial: "info_window",
+                                      locals: { island: island })
       }
     end
     @booking = Booking.new
