@@ -6,7 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
-
+Booking.destroy_all
+Island.destroy_all
+User.destroy_all
 # User 1
 james = User.new(email: 'james@hotmail.com', password: 'azerty')
 james.save
@@ -25,6 +27,7 @@ mauritius.photo.attach(io: URI.open('https://www.austrianblog.com/media/images/o
                       filename: 'mauritius.png',
                       content_type: 'image/jpg')
 mauritius.user = james
+p james
 mauritius.save
 puts mauritius.name
 
