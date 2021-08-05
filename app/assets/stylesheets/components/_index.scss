@@ -4,6 +4,9 @@
 @import "navbar";
 @import "banner";
 @import "map";
+
+@import "cards";
+
 @import "footer";
 
 .index-banner {
@@ -13,6 +16,7 @@
 .title {
     color: black;
 }
+
 
 #map {
     position: sticky;
