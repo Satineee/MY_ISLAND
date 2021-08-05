@@ -23,7 +23,7 @@ mauritius = Island.new(name: 'Mauritius', location: 'Mauritius',
                       description: "Mauritius, an Indian Ocean island nation, is known for its beaches, lagoons and reefs. The mountainous interior includes Black River Gorges National Park, with rainforests, waterfalls, hiking trails and wildlife like the flying fox."
                       )
 
-mauritius.photo.attach(io: URI.open('https://www.austrianblog.com/media/images/our-top-7-highlights-in-mauritius.original.jpg'),
+mauritius.photo.attach(io: URI.open('https://www.planetdiveholidays.com/blog/wp-content/uploads/sites/3/2016/07/aerial-photo-le-morne-mauritius-e1518086891149.jpg'),
                       filename: 'mauritius.png',
                       content_type: 'image/jpg')
 mauritius.user = james
@@ -89,7 +89,7 @@ shetland = Island.new(name: 'South Shetland Island', location: 'Nelson Island',
                     description: "Nelson Island is an island in the Sunshine Coast region of the South Coast region of British Columbia. It is surrounded by Hotham Sound, Agamemnon Channel, and Malaspina Strait."
                     )
 
-shetland.photo.attach(io: URI.open('https://s3.amazonaws.com/storage-ubertor-com/cl4065/content/image/31645.jpg'),
+shetland.photo.attach(io: URI.open('https://img.traveltriangle.com/blog/wp-content/uploads/2017/09/Lankayan.jpg'),
                     filename: 'nelson.jpg',
                     content_type: 'image/jpg')
 shetland.user = james

@@ -73,8 +73,8 @@
       <br>
     <% end %>
     <% if policy(@island).edit? %>
-      <%= link_to 'Delete', island_path(@island), method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-danger" %> | <%= link_to 'edit', edit_island_path(@island), class: 'btn btn-primary' %>
-      <%= link_to 'back', user_path(current_user), class: 'text-decoration-none' %>
+      <%= link_to 'Delete', island_path(@island), method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-danger" %> <%= link_to 'edit', edit_island_path(@island), class: 'btn btn-primary' %>
+      <%= link_to 'back', user_path(current_user), class: 'btn' %>
     <% else %>
       <%= link_to 'Book now!', new_island_booking_path(@island), class: "btn btn-primary" %>
       <%= link_to 'Back', islands_path, class: 'btn btn' %>
