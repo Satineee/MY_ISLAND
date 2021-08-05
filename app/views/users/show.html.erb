@@ -1,11 +1,23 @@
 <div class="container">
+
   <div class="content">
+
     <div class="user-bar d-flex justify-content-between">
       <h1>Welcome <%= @name %>! </h1>
       <%= link_to 'Add an island', new_island_path, class: 'btn btn-user' %>
     </div>
+
     <div class="user">
-      <div class="user-info d-flex justify-content-around">
+      <div class="info d-flex justify-content-between">
+        <div class="user-left">
+          <p>Name: <%= @name %> </p>
+          <p>Email:  <%= @user.email %> </p>
+        </div>
+        <div class="user-right mt-auto">
+          <%= link_to 'edit', edit_user_path(@user), class:'btn' %>
+        </div>
+      </div>
+      <div class="user-info ">
         <div class="islands">
           <h3>My Islands</h3>
           <% @islands.each do |island| %>
@@ -34,5 +46,7 @@
         </div>
       </div>
     </div>
+
   </div>
+
 </div>
