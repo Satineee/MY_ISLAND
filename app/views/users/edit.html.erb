@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="sign-in">
+	  <%= simple_form_for @user do |f| %>
+	  <%= f.input :email %>
+	  <%= f.input :password %>
+	  <%= f.button :submit %>
+	  <% end %>
+  </div>
+</div>
