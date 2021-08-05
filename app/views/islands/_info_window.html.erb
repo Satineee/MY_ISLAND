@@ -1,2 +1,5 @@
-<h2><%= island.name %></h2>
-<p><%= island.location %></p>
+<%= link_to island_path(island), class:'text-decoration-none' do %>
+    <%= cl_image_tag island.photo.key, height: 130, width: 190, crop: :fill, class:"radius-top" %>
+    <strong><p class="popup-name color-black border-0"><%= island.name %></p></strong>
+    <p class="popup-location color-black"><%= island.location %></p>
+<% end %>

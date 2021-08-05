@@ -5,6 +5,14 @@
 @import "banner";
 @import "map";
 
+.index-banner {
+    margin-top: 10px;
+}
+
+.title {
+    color: black;
+}
+
 #map {
     position: sticky;
     top: 0;
@@ -22,12 +30,19 @@
     border-radius: 10px;
 }
 
-.text-location {
-    font-family:'Courier New', Courier, monospace;
-    font-size: 20px;
-    color: black;
+.text-name {
+    font-family:'Adobe Fan Heiti Std B', Adobe Fan Heiti Std B, monospace;
+    font-size: 25px;
 }
 
-.img {
+#text-location {
+    font-size: 20px;
+}
+
+.color-black {
+   color: black;
+}
+
+.border-radius {
     border-radius: 10px;
 }

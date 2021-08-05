@@ -1,10 +1,12 @@
-<div class="home-banner">
-  <h1 class='title'>All Islands</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://maximumwallhd.com/wp-content/uploads/2015/07/fonds-ecran-ile-paradisique-12.jpg);">
+  <div class="container">
+    <h1>All Islands</h1>
+  </div>
 </div>
 
 <div class="container-island">
   <div class="row">
-    <div class="col-sm-7">
+    <div class="col-sm-8">
 		<div>
 			<% @islands.each do |island| %>
 				<%= link_to island_path(island), class:'text-decoration-none' do %>
@@ -14,12 +16,12 @@
 								<%= cl_image_tag island.photo.key, height: 200, width: 300, crop: :fill, class: 'img' %>
 							<% end %>
 						</div>
-						<div class="pl-4 pt-2">
+						<div class="pl-4 pt-5">
 						  <ul>
-							<span class="text-location"><%= island.name %></span>
+							<strong><span class="text-name color-black"><%= island.name %></span></strong>
 						  </ul>
 						  <ul>
-							<span class="text-location"><%= island.location %></span>
+							<span class="text-name color-black" id="text-location"><%= island.location %></span>
 						  </ul>
 						</div>
 					</div>
@@ -27,9 +29,9 @@
 			<% end %>
 		</div>
 	</div>
-    <div class="col-lg-5">
+    <div class="col-lg-4">
 		<div id="map"
-		style="width: 620px; height: 100vh;"
+		style="width: 600px; height: 100vh;"
 		data-markers="<%= @markers.to_json %>"
 		data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 		</div>
