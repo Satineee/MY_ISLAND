@@ -1,8 +1,15 @@
-<div class="container">
-<h1>YOUR BOOKING</h1>
 
-<p>Start: <%= @booking.start_date %></p>
-<p>End: <%= @booking.end_date %></p>
-<p>Price: <%= @booking.total_price %>€</p>
-
+<div class="card text-center">
+  <div class="card-header">
+    <h1> YOUR BOOKING</h1>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Welcome <%= @name%>!</h5>
+    <p class="card-text">Your booking starts on the  <%= @booking.start_date %> and ends on the  <%= @booking.end_date %>.</p>
+    <p class="card-text">Your bill is  <%= @booking.total_price %>€</p>
+    <%= link_to 'Back to homepage', root_path, class: 'btn btn-primary' %>
+  </div>
+  <div class="card-footer text-muted">
+    Thank you for your booking!
+  </div>
 </div>

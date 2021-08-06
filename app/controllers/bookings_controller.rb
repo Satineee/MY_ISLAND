@@ -8,6 +8,8 @@ class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
     authorize @booking
+    @name = @booking.user.email.split('@').first.capitalize
+
   end
 
   def new
