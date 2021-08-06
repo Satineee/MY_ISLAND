@@ -17,6 +17,14 @@ james.save
 tom = User.new(email: 'tom@tom.com', password: 'qwerty')
 tom.save
 
+# User 3
+john = User.new(email: 'john@tom.com', password: 'qwerty')
+john.save
+
+# User 4
+bernard = User.new(email: 'bernard@tom.com', password: 'qwerty')
+bernard.save
+
 # Island 1
 mauritius = Island.new(name: 'Mauritius', location: 'Mauritius',
                       price: 10000,
@@ -101,3 +109,95 @@ shetland.photos.attach(io: URI.open('https://img.traveltriangle.com/blog/wp-cont
 shetland.user = james
 shetland.save
 puts shetland.name
+
+# Island 7
+fernando = Island.new(name: 'Fernando De Noronha', location: 'Fernando De Noronha, Brazil',
+                    price: 9700,
+                    description: "The archipelago is made of 21 islands, 354 km (220 mi) away from the Brazilian shore. Due to the South Equatorial Current, the water is very warm and diving with no suit is possible in the 40 m depth. The marine landscape features tunnels, canyons and rocks, making the experience even more exciting.",
+                    ocean: "Atlantic Ocean"
+                    )
+
+fernando.photo.attach(io: URI.open('https://www.pandotrip.com/wp-content/uploads/2016/04/Fernando.jpg'),
+                    filename: 'fernando.jpg',
+                    content_type: 'image/jpg')
+fernando.user = john
+fernando.save
+puts fernando.name
+
+# Island 8
+canary = Island.new(name: 'Canary Islands', location: 'Canary Islands, Spain',
+                    price: 2399,
+                    description: "The archipelago consists of a group of islands scattered in the ocean. La Palma and Tenerife are the most popular among the tourists, who come here to enjoy the numerous beaches, unspoiled nature and impeccable resorts.",
+                    ocean: "Atlantic Ocean"
+                    )
+
+canary.photo.attach(io: URI.open('https://www.pandotrip.com/wp-content/uploads/2016/04/Canary2.jpg'),
+                    filename: 'canary.jpg',
+                    content_type: 'image/jpg')
+canary.user = john
+canary.save
+puts canary.name
+
+# Island 9
+spitzberg = Island.new(name: 'Spitzberg Island', location: 'Spitzberg, Norway',
+                    price: 12000,
+                    description: "Located in the chilly waters between mainland Norway and the North Pole, this Arctic Hope Spot supports a high diversity of marine species and contains many unique habitats found nowhere else in the world, including dramatic glaciers and mountain fjords. Spitsbergen (formerly known as West Spitsbergen or Vestspitsbergen in Norwegian) is the largest and only permanently populated island of Norway’s Svalbard Archipelago.",
+                    ocean: "Artic Ocean"
+                    )
+
+spitzberg.photo.attach(io: URI.open('https://lh3.googleusercontent.com/keNdjdlDCx3cnuTkHi9OzT2os-g8mlmfxp2DAOGVLanI8eukT32fOKb4uqU3CJlC'),
+                    filename: 'spitzberg.jpg',
+                    content_type: 'image/jpg')
+spitzberg.user = bernard
+spitzberg.save
+puts spitzberg.name
+
+# Island 10
+seychelles = Island.new(name: 'Seychelles', location: 'Seychelles',
+                    price: 12000,
+                    description: "An archipelago of some 115 islands, the Seychelles are best known for their private resort islands attracting celebrities and royals from around the globe, the large, smooth rocks lining brilliant white beaches, and those cheeky-looking coco-de-mer nuts that are even found on the passport stamps. Landing on the main island Mahe, where the tiny capital Victoria can be found, you can easily spend the rest of your vacation there, as it has plenty of resorts, plenty of activities, and plenty to see. But you can move on to the larger La Digue or Praslin Islands, or some of the private resort islands such as Fregate, or North Island, depending on what your budget and occasion are. But whichever area you choose, you will find stunning flora and fauna, a sea that is as clear as spring water, and a cuisine that is a tasty mix of creole, French, Indian, African, and then some.",
+                    ocean: "Indian Ocean"
+                    )
+
+seychelles.photo.attach(io: URI.open('https://upload.travelawaits.com/ta/uploads/2021/04/anse-source-d-argent-beach-in155644-800x800.jpg'),
+                    filename: 'seychelles.jpg',
+                    content_type: 'image/jpg')
+seychelles.user = john
+seychelles.save
+puts seychelles.name
+
+# Island 11
+bali = Island.new(name: 'Bali', location: 'Bali, Indonesia',
+                    price: 37000,
+                    description: "There is no other place like Bali in this world. A magical blend of culture, people, nature, activities, weather, culinary delights, nightlife, and beautiful accommodation. Bali is rated as one of the best travel destinations in the world by countless websites, review portals, and travel magazines each year – for very good reasons. Whatever your age, background, budget or interest, there is something great for everyone to explore and discover. And that’s a promise.",
+                    ocean: "Indian Ocean"
+                    )
+
+bali.photo.attach(io: URI.open('https://ychef.files.bbci.co.uk/976x549/p014pzq8.jpg'),
+                    filename: 'bali.jpg',
+                    content_type: 'image/jpg')
+bali.user = john
+bali.save
+puts bali.name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
