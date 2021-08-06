@@ -17,10 +17,18 @@ james.save
 tom = User.new(email: 'tom@tom.com', password: 'qwerty')
 tom.save
 
+# User 3
+john = User.new(email: 'john@tom.com', password: 'qwerty')
+john.save
+
+# User 4
+bernard = User.new(email: 'bernard@tom.com', password: 'qwerty')
+bernard.save
+
 # Island 1
 mauritius = Island.new(name: 'Mauritius', location: 'Mauritius',
                       price: 10000,
-                      description: "Mauritius, an Indian Ocean island nation, is known for its beaches, lagoons and reefs. The mountainous interior includes Black River Gorges National Park, with rainforests, waterfalls, hiking trails and wildlife like the flying fox."
+                      description: "Mauritius, an Indian Ocean island nation, is known for its beaches, lagoons and reefs. The mountainous interior includes Black River Gorges National Park, with rainforests, waterfalls, hiking trails and wildlife like the flying fox.",
                       ocean: "Indian Ocean"
                       )
 
@@ -35,7 +43,7 @@ puts mauritius.name
 # Island 2
 tasmania = Island.new(name: 'Tasmania', location: 'Tasmania',
                       price: 12000,
-                      description: 'Tasmania, abbreviated as Tas, is an island state of Australia. It is located 240 km to the south of the Australian mainland, separated from it by the Bass Strait.'
+                      description: 'Tasmania, abbreviated as Tas, is an island state of Australia. It is located 240 km to the south of the Australian mainland, separated from it by the Bass Strait.',
                       ocean: "Pacific Ocean"
                       )
 
@@ -49,7 +57,7 @@ puts tasmania.name
 # Island 3
 bora = Island.new(name: 'Bora Bora', location: 'Bora Bora',
                   price: 9000,
-                  description: "Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia. Surrounded by sand-fringed motus (islets) and a turquoise lagoon protected by a coral reef, it’s known for its scuba diving"
+                  description: "Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia. Surrounded by sand-fringed motus (islets) and a turquoise lagoon protected by a coral reef, it’s known for its scuba diving",
                   ocean: "Pacific Ocean"
                   )
 
@@ -63,7 +71,7 @@ puts bora.name
 # Island 4
 fiji = Island.new(name: 'Fiji Islands', location: 'Fiji',
                   price: 9500,
-                  description: "Fiji, a country in the South Pacific, is an archipelago of more than 300 islands. It's famed for rugged landscapes, palm-lined beaches and coral reefs with clear lagoons."
+                  description: "Fiji, a country in the South Pacific, is an archipelago of more than 300 islands. It's famed for rugged landscapes, palm-lined beaches and coral reefs with clear lagoons.",
                   ocean: "Pacific Ocean"
                   )
 
@@ -77,7 +85,7 @@ puts fiji.name
 # Island 5
 hawaii = Island.new(name: 'Hawaii Islands', location: 'Hawaii',
                     price: 10500,
-                    description: "The culture of our Hawaiian Islands is steeped in the values of kuleana and aloha."
+                    description: "The culture of our Hawaiian Islands is steeped in the values of kuleana and aloha.",
                     ocean: "Pacific Ocean"
                     )
 
@@ -91,7 +99,7 @@ puts hawaii.name
 # Island 6
 shetland = Island.new(name: 'South Shetland Island', location: 'Nelson Island',
                     price: 5000,
-                    description: "Nelson Island is an island in the Sunshine Coast region of the South Coast region of British Columbia. It is surrounded by Hotham Sound, Agamemnon Channel, and Malaspina Strait."
+                    description: "Nelson Island is an island in the Sunshine Coast region of the South Coast region of British Columbia. It is surrounded by Hotham Sound, Agamemnon Channel, and Malaspina Strait.",
                     ocean: "Atlantic Ocean"
                     )
 
@@ -101,3 +109,95 @@ shetland.photo.attach(io: URI.open('https://img.traveltriangle.com/blog/wp-conte
 shetland.user = james
 shetland.save
 puts shetland.name
+
+# Island 7
+fernando = Island.new(name: 'Fernando De Noronha', location: 'Fernando De Noronha, Brazil',
+                    price: 9700,
+                    description: "The archipelago is made of 21 islands, 354 km (220 mi) away from the Brazilian shore. Due to the South Equatorial Current, the water is very warm and diving with no suit is possible in the 40 m depth. The marine landscape features tunnels, canyons and rocks, making the experience even more exciting.",
+                    ocean: "Atlantic Ocean"
+                    )
+
+fernando.photo.attach(io: URI.open('https://www.pandotrip.com/wp-content/uploads/2016/04/Fernando.jpg'),
+                    filename: 'fernando.jpg',
+                    content_type: 'image/jpg')
+fernando.user = john
+fernando.save
+puts fernando.name
+
+# Island 8
+canary = Island.new(name: 'Canary Islands', location: 'Canary Islands, Spain',
+                    price: 2399,
+                    description: "The archipelago consists of a group of islands scattered in the ocean. La Palma and Tenerife are the most popular among the tourists, who come here to enjoy the numerous beaches, unspoiled nature and impeccable resorts.",
+                    ocean: "Atlantic Ocean"
+                    )
+
+canary.photo.attach(io: URI.open('https://www.pandotrip.com/wp-content/uploads/2016/04/Canary2.jpg'),
+                    filename: 'canary.jpg',
+                    content_type: 'image/jpg')
+canary.user = john
+canary.save
+puts canary.name
+
+# Island 9
+spitzberg = Island.new(name: 'Spitzberg Island', location: 'Spitzberg, Norway',
+                    price: 12000,
+                    description: "Located in the chilly waters between mainland Norway and the North Pole, this Arctic Hope Spot supports a high diversity of marine species and contains many unique habitats found nowhere else in the world, including dramatic glaciers and mountain fjords. Spitsbergen (formerly known as West Spitsbergen or Vestspitsbergen in Norwegian) is the largest and only permanently populated island of Norway’s Svalbard Archipelago.",
+                    ocean: "Artic Ocean"
+                    )
+
+spitzberg.photo.attach(io: URI.open('https://lh3.googleusercontent.com/keNdjdlDCx3cnuTkHi9OzT2os-g8mlmfxp2DAOGVLanI8eukT32fOKb4uqU3CJlC'),
+                    filename: 'spitzberg.jpg',
+                    content_type: 'image/jpg')
+spitzberg.user = bernard
+spitzberg.save
+puts spitzberg.name
+
+# Island 10
+seychelles = Island.new(name: 'Seychelles', location: 'Seychelles',
+                    price: 12000,
+                    description: "An archipelago of some 115 islands, the Seychelles are best known for their private resort islands attracting celebrities and royals from around the globe, the large, smooth rocks lining brilliant white beaches, and those cheeky-looking coco-de-mer nuts that are even found on the passport stamps. Landing on the main island Mahe, where the tiny capital Victoria can be found, you can easily spend the rest of your vacation there, as it has plenty of resorts, plenty of activities, and plenty to see. But you can move on to the larger La Digue or Praslin Islands, or some of the private resort islands such as Fregate, or North Island, depending on what your budget and occasion are. But whichever area you choose, you will find stunning flora and fauna, a sea that is as clear as spring water, and a cuisine that is a tasty mix of creole, French, Indian, African, and then some.",
+                    ocean: "Indian Ocean"
+                    )
+
+seychelles.photo.attach(io: URI.open('https://upload.travelawaits.com/ta/uploads/2021/04/anse-source-d-argent-beach-in155644-800x800.jpg'),
+                    filename: 'seychelles.jpg',
+                    content_type: 'image/jpg')
+seychelles.user = john
+seychelles.save
+puts seychelles.name
+
+# Island 11
+bali = Island.new(name: 'Bali', location: 'Bali, Indonesia',
+                    price: 37000,
+                    description: "There is no other place like Bali in this world. A magical blend of culture, people, nature, activities, weather, culinary delights, nightlife, and beautiful accommodation. Bali is rated as one of the best travel destinations in the world by countless websites, review portals, and travel magazines each year – for very good reasons. Whatever your age, background, budget or interest, there is something great for everyone to explore and discover. And that’s a promise.",
+                    ocean: "Indian Ocean"
+                    )
+
+bali.photo.attach(io: URI.open('https://ychef.files.bbci.co.uk/976x549/p014pzq8.jpg'),
+                    filename: 'bali.jpg',
+                    content_type: 'image/jpg')
+bali.user = john
+bali.save
+puts bali.name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
