@@ -24,7 +24,7 @@ mauritius = Island.new(name: 'Mauritius', location: 'Mauritius',
                       ocean: "Indian Ocean"
                       )
 
-mauritius.photo.attach(io: URI.open('https://www.planetdiveholidays.com/blog/wp-content/uploads/sites/3/2016/07/aerial-photo-le-morne-mauritius-e1518086891149.jpg'),
+mauritius.photos.attach(io: URI.open('https://www.planetdiveholidays.com/blog/wp-content/uploads/sites/3/2016/07/aerial-photo-le-morne-mauritius-e1518086891149.jpg'),
                       filename: 'mauritius.png',
                       content_type: 'image/jpg')
 mauritius.user = james
@@ -39,7 +39,7 @@ tasmania = Island.new(name: 'Tasmania', location: 'Tasmania',
                       ocean: "Pacific Ocean"
                       )
 
-tasmania.photo.attach(io: URI.open('https://bloximages.newyork1.vip.townnews.com/stltoday.com/content/tncms/assets/v3/editorial/c/e6/ce6048b7-a206-5628-9e7f-331aef27b6c3/56f1f554973ff.image.jpg'),
+tasmania.photos.attach(io: URI.open('https://bloximages.newyork1.vip.townnews.com/stltoday.com/content/tncms/assets/v3/editorial/c/e6/ce6048b7-a206-5628-9e7f-331aef27b6c3/56f1f554973ff.image.jpg'),
                       filename: 'tasmania.jpg',
                       content_type: 'image/jpg')
 tasmania.user = james
@@ -53,11 +53,11 @@ bora = Island.new(name: 'Bora Bora', location: 'Bora Bora',
                   ocean: "Pacific Ocean"
                   )
 
-bora.photo.attach(io: URI.open('https://pix8.agoda.net/hotelImages/2311976/0/28f866c007b559024a4833e6ea93217b.jpg'),
+bora.photos.attach(io: URI.open('https://pix8.agoda.net/hotelImages/2311976/0/28f866c007b559024a4833e6ea93217b.jpg'),
                   filename: 'borabora.jpg',
                   content_type: 'image/jpg')
 bora.user = tom
-bora.save
+bora.save!
 puts bora.name
 
 # Island 4
@@ -67,7 +67,7 @@ fiji = Island.new(name: 'Fiji Islands', location: 'Fiji',
                   ocean: "Pacific Ocean"
                   )
 
-fiji.photo.attach(io: URI.open('https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/Cover-Fiji-In-Decemberepb0310.jpg'),
+fiji.photos.attach(io: URI.open('https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/Cover-Fiji-In-Decemberepb0310.jpg'),
                   filename: 'fiji.jpg',
                   content_type: 'image/jpg')
 fiji.user = tom
@@ -81,7 +81,7 @@ hawaii = Island.new(name: 'Hawaii Islands', location: 'Hawaii',
                     ocean: "Pacific Ocean"
                     )
 
-hawaii.photo.attach(io: URI.open('https://www.gannett-cdn.com/presto/2020/01/15/USAT/610d28ed-f048-4808-bbef-589bc5ef6cc6-Hawaii.jpg'),
+hawaii.photos.attach(io: URI.open('https://www.gannett-cdn.com/presto/2020/01/15/USAT/610d28ed-f048-4808-bbef-589bc5ef6cc6-Hawaii.jpg'),
                     filename: 'hawaii.jpg',
                     content_type: 'image/jpg')
 hawaii.user = tom
@@ -95,7 +95,7 @@ shetland = Island.new(name: 'South Shetland Island', location: 'Nelson Island',
                     ocean: "Atlantic Ocean"
                     )
 
-shetland.photo.attach(io: URI.open('https://img.traveltriangle.com/blog/wp-content/uploads/2017/09/Lankayan.jpg'),
+shetland.photos.attach(io: URI.open('https://img.traveltriangle.com/blog/wp-content/uploads/2017/09/Lankayan.jpg'),
                     filename: 'nelson.jpg',
                     content_type: 'image/jpg')
 shetland.user = james
