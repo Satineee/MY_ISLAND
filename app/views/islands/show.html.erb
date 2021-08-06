@@ -67,17 +67,17 @@
       </div>
     </div>
     <div class="right card m-3">
-      <h4 class="text-center">Add dates to see the price</h4>
-      <%= simple_form_for [@island, @booking] do |f| %>
-        <%= f.input :start_date, as: :date, html5: true %>
-        <%= f.input :end_date, as: :date, html5: true %>
-        <br>
-      <% end %>
       <% if policy(@island).edit? %>
         <%= link_to 'Delete', island_path(@island), method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-danger" %> <%= link_to 'edit', edit_island_path(@island), class: 'btn btn-primary' %>
         <%= link_to 'back', user_path(current_user), class: 'btn' %>
       <% else %>
-        <%= link_to 'Book now!', new_island_booking_path(@island), class: "btn btn-primary" %>
+        <h4 class="text-center">NEW BOOKING</h4>
+        <%= simple_form_for [@island, @booking] do |f| %>
+          <%= f.input :start_date, as: :date, html5: true %>
+          <%= f.input :end_date, as: :date, html5: true %>
+          <%= f.submit 'Book', class: 'btn btn-primary' %>
+          <br>
+        <% end %>
         <%= link_to 'Back', islands_path, class: 'btn btn' %>
       <% end %> 
     </div>
