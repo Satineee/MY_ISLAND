@@ -35,12 +35,15 @@ mauritius = Island.new(name: 'Mauritius', location: 'Mauritius',
 mauritius.photos.attach(io: URI.open('https://www.planetdiveholidays.com/blog/wp-content/uploads/sites/3/2016/07/aerial-photo-le-morne-mauritius-e1518086891149.jpg'),
                       filename: 'mauritius.png',
                       content_type: 'image/jpg')
+p 'picture'
 mauritius.photos.attach(io: URI.open('https://www.planetware.com/wpimages/2020/03/mauritius-best-resorts-shangri-las-le-touessrok-resort-spa.jpg'),
                       filename: 'mauritius.png',
                       content_type: 'image/jpg')
+p 'picture'
 mauritius.photos.attach(io: URI.open('https://mauritiuspropertyrealestate.files.wordpress.com/2013/02/oneonly-le-saint-geran-6.jpg'),
                       filename: 'mauritius.png',
                       content_type: 'image/jpg')
+p 'picture'
 mauritius.user = james
 p james
 mauritius.save
@@ -58,12 +61,15 @@ tasmania = Island.new(name: 'Tasmania', location: 'Tasmania',
 tasmania.photos.attach(io: URI.open('https://bloximages.newyork1.vip.townnews.com/stltoday.com/content/tncms/assets/v3/editorial/c/e6/ce6048b7-a206-5628-9e7f-331aef27b6c3/56f1f554973ff.image.jpg'),
                       filename: 'tasmania.jpg',
                       content_type: 'image/jpg')
-tasmania.photos.attach(io: URI.open('https://images.7news.com.au/publication/C-2052060/65ea5d99f5567ec40a50b12ac52deb4a2de8cb1a-16x9-x0y181w2123h1194.jpg?imwidth=650&impolicy=sevennews_v2'),
+p 'picture'
+tasmania.photos.attach(io: URI.open('https://www.traveller.com.au/content/dam/images/h/1/h/e/c/r/image.related.articleLeadwide.620x349.h1ha2o.png/1567145915767.jpg'),
                       filename: 'tasmania.jpg',
                       content_type: 'image/jpg')
-tasmania.photos.attach(io: URI.open('https://www.qantas.com/content/dam/travelinsider/images/explore/australia/tasmania/tasmanias-natural-wonders/peppers-lodge-cradle-mountain-tasmania-winter.jpg'),
+p 'picture'
+tasmania.photos.attach(io: URI.open('https://www.responsibletravel.com/imagesclient/L_207748.jpg'),
                       filename: 'tasmania.jpg',
                       content_type: 'image/jpg')
+p 'picture'
 tasmania.user = james
 tasmania.save
 puts tasmania.name
@@ -80,12 +86,15 @@ bora = Island.new(name: 'Bora Bora', location: 'Bora Bora',
 bora.photos.attach(io: URI.open('https://pix8.agoda.net/hotelImages/2311976/0/28f866c007b559024a4833e6ea93217b.jpg'),
                   filename: 'borabora.jpg',
                   content_type: 'image/jpg')
+p 'picture'
 bora.photos.attach(io: URI.open('https://cdn2.civitatis.com/polinesia-francesa/bora-bora/galeria/header/bora-bora-tiburones-peces-rayas-snorkel.jpg'),
                   filename: 'borabora.jpg',
                   content_type: 'image/jpg')
+p 'picture'
 bora.photos.attach(io: URI.open('https://www.bestereistijd.nl/uploads/2019/07/4029449-640x360.jpg'),
                   filename: 'borabora.jpg',
                   content_type: 'image/jpg')
+p 'picture'
 bora.user = tom
 bora.save!
 puts bora.name
@@ -102,12 +111,15 @@ fiji = Island.new(name: 'Fiji Islands', location: 'Fiji',
 fiji.photos.attach(io: URI.open('https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/Cover-Fiji-In-Decemberepb0310.jpg'),
                   filename: 'fiji.jpg',
                   content_type: 'image/jpg')
+p 'picture'
 fiji.photos.attach(io: URI.open('https://www.thebrokebackpacker.com/wp-content/uploads/2019/10/Fiji-shutterstock_190694777.jpg'),
                   filename: 'fiji.jpg',
                   content_type: 'image/jpg')
+p 'picture'
 fiji.photos.attach(io: URI.open('https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/Cover-Fiji-In-Decemberepb0310.jpg'),
                   filename: 'fiji.jpg',
                   content_type: 'image/jpg')
+p 'picture'
 fiji.user = tom
 fiji.save
 puts fiji.name
@@ -124,12 +136,15 @@ hawaii = Island.new(name: 'Hawaii Islands', location: 'Hawaii',
 hawaii.photos.attach(io: URI.open('https://www.gannett-cdn.com/presto/2020/01/15/USAT/610d28ed-f048-4808-bbef-589bc5ef6cc6-Hawaii.jpg'),
                     filename: 'hawaii.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 hawaii.photos.attach(io: URI.open('https://photo980x880.mnstatic.com/41bfa6979535e69e35a984ae247606d4/maui-hawaii-9067880.jpg'),
                     filename: 'hawaii.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 hawaii.photos.attach(io: URI.open('https://haleakalaecotours.com/wp-content/uploads/2019/04/hawaii-dangerous-waves.jpg'),
                     filename: 'hawaii.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 hawaii.user = tom
 hawaii.save
 puts hawaii.name
@@ -146,12 +161,15 @@ shetland = Island.new(name: 'South Shetland Island', location: 'Nelson Island',
 shetland.photos.attach(io: URI.open('https://img.traveltriangle.com/blog/wp-content/uploads/2017/09/Lankayan.jpg'),
                     filename: 'nelson.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 shetland.photos.attach(io: URI.open('https://www.worldatlas.com/upload/e5/b8/36/shetland-islands-scotland-uk-shaiith.jpg'),
                     filename: 'nelson.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 shetland.photos.attach(io: URI.open('https://lp-cms-production.imgix.net/features/2019/04/GettyImages-200191809-001-6b53cb0a1edd.jpg'),
                     filename: 'nelson.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 shetland.user = james
 shetland.save
 puts shetland.name
@@ -168,12 +186,15 @@ fernando = Island.new(name: 'Fernando De Noronha', location: 'Fernando De Noronh
 fernando.photos.attach(io: URI.open('https://www.pandotrip.com/wp-content/uploads/2016/04/Fernando.jpg'),
                     filename: 'fernando.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 fernando.photos.attach(io: URI.open('https://content.r9cdn.net/rimg/dimg/cb/31/6a7e39dd-city-52540-16f0fa77274.jpg?crop=true&width=568&height=320&xhint=1787&yhint=1002'),
                     filename: 'fernando.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 fernando.photos.attach(io: URI.open('http://www.framboisez-vous.com/wp-content/uploads/2018/03/fernando.jpg'),
                     filename: 'fernando.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 fernando.user = john
 fernando.save
 puts fernando.name
@@ -190,12 +211,15 @@ canary = Island.new(name: 'Canary Islands', location: 'Canary Islands, Spain',
 canary.photos.attach(io: URI.open('https://www.pandotrip.com/wp-content/uploads/2016/04/Canary2.jpg'),
                     filename: 'canary.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 canary.photos.attach(io: URI.open('https://cdn.kiwicollection.com/media/property/PR003249/l/003249-02-custom_RCABAMA_00190_197320.jpg?cb=1438370602'),
                     filename: 'canary.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 canary.photos.attach(io: URI.open('https://www.itij.com/sites/default/files/styles/og_image/public/2020-11/canary-islands.jpg?h=609db05f&itok=xYpga1Ye'),
                     filename: 'canary.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 canary.user = john
 canary.save
 puts canary.name
@@ -212,12 +236,15 @@ spitzberg = Island.new(name: 'Spitzberg Island', location: 'Spitzberg, Norway',
 spitzberg.photos.attach(io: URI.open('https://lh3.googleusercontent.com/keNdjdlDCx3cnuTkHi9OzT2os-g8mlmfxp2DAOGVLanI8eukT32fOKb4uqU3CJlC'),
                     filename: 'spitzberg.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 spitzberg.photos.attach(io: URI.open('https://www.worldatlas.com/upload/cc/53/f5/northern-lights-longyearbyen-spitsbergen-island-svalbard-norway-ginger-polina-bublik.jpg'),
                     filename: 'spitzberg.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 spitzberg.photos.attach(io: URI.open('https://www.cruisemapper.com/images/ports/9197-eaef8ea14cc.jpg'),
                     filename: 'spitzberg.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 spitzberg.user = bernard
 spitzberg.save
 puts spitzberg.name
@@ -234,12 +261,15 @@ seychelles = Island.new(name: 'Seychelles', location: 'Seychelles',
 seychelles.photos.attach(io: URI.open('https://upload.travelawaits.com/ta/uploads/2021/04/anse-source-d-argent-beach-in155644-800x800.jpg'),
                     filename: 'seychelles.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 seychelles.photos.attach(io: URI.open('https://offshore-society.com/wp-content/uploads/2018/02/ouvrir-societe-offshore-seychelles.jpg'),
                     filename: 'seychelles.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 seychelles.photos.attach(io: URI.open('https://iaa-network.com/wp-content/uploads/2021/03/Seychelles-arbitration-1.jpg'),
                     filename: 'seychelles.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 seychelles.user = john
 seychelles.save
 puts seychelles.name
@@ -256,12 +286,15 @@ bali = Island.new(name: 'Bali', location: 'Bali, Indonesia',
 bali.photos.attach(io: URI.open('https://ychef.files.bbci.co.uk/976x549/p014pzq8.jpg'),
                     filename: 'bali.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 bali.photos.attach(io: URI.open('https://www.traveldailymedia.com/assets/2020/07/bali.jpg'),
                     filename: 'bali.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 bali.photos.attach(io: URI.open('https://static.toiimg.com/photo/84371258.cms'),
                     filename: 'bali.jpg',
                     content_type: 'image/jpg')
+p 'picture'
 bali.user = john
 bali.save
 puts bali.name
