@@ -52,8 +52,10 @@
                   <h4> Owner: <%= @name %> </h4> <%= image_tag("4.jpeg",width: 40, height: 40, class: 'avatar') %>
                 </div>
 
+
                 <div class="extra">
                   <p> <i class="fas fa-search"></i> Location: <%= @island.location %> </p>
+                  <p> In: <%= @island.ocean %> </p>
                   <p> Price: <%= @island.price %>€ </p>
                   <p> <%= @island.description%> </p>
                   <br>
@@ -76,6 +78,7 @@
               data-markers="<%= @markers.to_json %>"
               data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
             </div>
+
           </div>
         </div>
           </div>

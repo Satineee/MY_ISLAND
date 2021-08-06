@@ -1,3 +1,4 @@
+
 <div class="background-form">
   <div class="container">
     <div class="center">
@@ -5,6 +6,7 @@
         <%= simple_form_for @new_island do |f| %>
         <%= f.input :name, :placeholder => "An amazing name for a beautiful island", class:"form" %>
         <%= f.input :location, :placeholder => "Somewhere in paradise", class:"form"  %>
+        <%= f.input :ocean, :collection => ["Atlantic Ocean", "Arctic Ocean", "Pacific Ocean", "Indian Ocean"] %>
         <%= f.input :price, :placeholder => "A price has its value", class:"form"  %>
         <%= f.input :description, class:"form" %>
         <%= f.input :photos, as: :file, input_html: {multiple: true} %>

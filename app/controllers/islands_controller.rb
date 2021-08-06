@@ -20,10 +20,14 @@ class IslandsController < ApplicationController
   end
 
   def index
+    @ocean = params[:ocean]
     # @islands = Island.all
+    @islands = policy_scope(Island).order(created_at: :desc)
     if params[:query].present?
       sql_query = "name ILIKE :query OR location ILIKE :query"
       @islands = policy_scope(Island).where(sql_query, query: "%#{params[:query]}%")
+    elsif @ocean.present?
+      @islands = @islands.where(ocean: @ocean)
     else
       @islands = policy_scope(Island).order(created_at: :desc)
     end
@@ -35,6 +39,11 @@ class IslandsController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { island: island })
       }
     end
+  end
+
+  def ocean_islands(ocean)
+    @islands = Island.all
+    @ocean_islands = @islands.where(@island.ocean == ocean)
   end
 
   def show
@@ -79,6 +88,6 @@ class IslandsController < ApplicationController
   private
 
   def island_params
-    params.require(:island).permit(:name, :price, :location, :description, photos: [])
+    params.require(:island).permit(:name, :price, :location, :description, photos: [], :ocean)
   end
 end
