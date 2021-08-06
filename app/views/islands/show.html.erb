@@ -16,34 +16,32 @@
             </div>
               <div class="d-flex">
                 <div>
-                <% if @island.photos.any? %>
                   <div class="pictures d-flex">
                     <div class="main-picture d-flex">
-                      <%= cl_image_tag @island.photos.first.key, height: 300, width: 400, crop: :fill %>
+                      <!-- 1st photo -->
+                      <% if @island.photos.first %>
+                        <%= cl_image_tag @island.photos.first.key, height: 300, width: 400, crop: :fill %>
+                      <% else %>
+                        <%= image_tag("Bora.jpeg", width: 400, height: 300, crop: :fill) %>
+                      <% end %>
                     </div>
                     <div class="secondary-pictures ">
-                      <%= cl_image_tag @island.photos.second.key,  width: 400, height: 145, crop: :fill, class: 'secondary-pict-up'%>
-                      <%= cl_image_tag @island.photos.third.key,  width: 400, height: 145, crop: :fill, class: 'secondary-pict-down'%>
+                      <!-- 2nd photo -->
+                      <% if @island.photos.second %>
+                        <%= cl_image_tag @island.photos.second.key,  width: 400, height: 145, crop: :fill, class: 'secondary-pict-up'%>
+                      <% else %>
+                        <%= image_tag("bora-2.jpeg", width: 400, height: 145, crop: :fill, class: 'secondary-pict-up') %>
+                      <% end %>
+                      <!-- 3rd photo -->
+                      <% if @island.photos.third %>
+                        <%= cl_image_tag @island.photos.third.key,  width: 400, height: 145, crop: :fill, class: 'secondary-pict-down'%>
+                      <% else %>
+                        <%= image_tag("bora-3.jpeg", width: 400, height: 145, crop: :fill, class: 'secondary-pict-down') %>
+                      <% end %>
                     </div>
                   </div>
-                <% else %>
-                  <div class="pictures d-flex">
-                    <div class="main-picture d-flex">
-                      <%= image_tag("Bora.jpeg",
-                        width: 400, height: 300, crop: :fill) %>
-                      <div class="secondary-pictures ">
-                        <%= image_tag("bora-2.jpeg",
-                        width: 400, height: 145, crop: :fill, class: 'secondary-pict-up') %>
-                        <%= image_tag("bora-3.jpeg",
-                        width: 400, height: 145, crop: :fill, class: 'secondary-pict-down') %>
-                      </div>
-                    </div>
-                  </div>
-                <% end %>
-
+                </div>
               </div>
-
-            </div>
 
             <div class="secondary d-flex">
 
