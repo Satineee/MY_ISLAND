@@ -1,14 +1,16 @@
-<div class="container">
-  <div class="center">
-    <div class="card-form">
-      <%= simple_form_for @new_island do |f| %>
-      <%= f.input :name, :placeholder => "An amazing name for a beautiful island", class:"form" %>
-      <%= f.input :location, :placeholder => "Somewhere in paradise", class:"form"  %>
-      <%= f.input :price, :placeholder => "A price has its value", class:"form"  %>
-      <%= f.input :description, class:"form" %>
-      <%= f.input :photo, as: :file %>
-      <%= f.button :submit %>
-      <% end %>
+<div class="background-form">
+  <div class="container">
+    <div class="center">
+      <div class="card-form">
+        <%= simple_form_for @new_island do |f| %>
+        <%= f.input :name, :placeholder => "An amazing name for a beautiful island", class:"form" %>
+        <%= f.input :location, :placeholder => "Somewhere in paradise", class:"form"  %>
+        <%= f.input :price, :placeholder => "A price has its value", class:"form"  %>
+        <%= f.input :description, class:"form" %>
+        <%= f.input :photos, as: :file, input_html: {multiple: true} %>
+        <%= f.button :submit, class:"btn-form" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

@@ -1,9 +1,18 @@
-<div class="container">
-  <div class="sign-in">
-	  <%= simple_form_for @user do |f| %>
-	  <%= f.input :email %>
-	  <%= f.input :password %>
-	  <%= f.button :submit %>
-	  <% end %>
-  </div>
+
+<div class="form-user">
+	<div class="container">
+		<div class="center">
+			<div class="card-form">
+					<div class="sign-in">
+						<%= simple_form_for @user do |f| %>
+						<%= f.input :email %>
+						<%= f.input :password %>
+						<%= f.button :submit, class:"btn-form" %>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
 </div>
+

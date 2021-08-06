@@ -1,71 +1,84 @@
 <div class="container">
   <div class="show d-flex">
     <div class="content">
+     <div class="d-flex">
+        <div>
+            <div class="header">
+              <h2> <%= @island.name %> </h2>
+              <div class="info d-flex justify-content-between">
+                <div class="info-left">
+                  <i class="fas fa-star"></i> <%= @rating %> | <%= @island.location %>
+                </div>
+                <div class="info-right">
+                  <i class="far fa-share-square"></i> Share | <i class="far fa-heart"></i> Save
+                </div>
+              </div>
+            </div>
+              <div class="d-flex">
+                <div>
+                <% if @island.photos.any? %>
+                  <div class="pictures d-flex">
+                    <div class="main-picture d-flex">
+                      <%= cl_image_tag @island.photos.first.key, height: 300, width: 400, crop: :fill %>
+                    </div>
+                    <div class="secondary-pictures ">
+                      <%= cl_image_tag @island.photos.second.key,  width: 400, height: 145, crop: :fill, class: 'secondary-pict-up'%>
+                      <%= cl_image_tag @island.photos.third.key,  width: 400, height: 145, crop: :fill, class: 'secondary-pict-down'%>
+                    </div>
+                  </div>
+                <% else %>
+                  <div class="pictures d-flex">
+                    <div class="main-picture d-flex">
+                      <%= image_tag("Bora.jpeg",
+                        width: 400, height: 300, crop: :fill) %>
+                      <div class="secondary-pictures ">
+                        <%= image_tag("bora-2.jpeg",
+                        width: 400, height: 145, crop: :fill, class: 'secondary-pict-up') %>
+                        <%= image_tag("bora-3.jpeg",
+                        width: 400, height: 145, crop: :fill, class: 'secondary-pict-down') %>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
 
-      <div class="header">
-        <h2> <%= @island.name %> </h2>
-        <div class="info d-flex justify-content-between">
-          <div class="info-left">
-            <i class="fas fa-star"></i> <%= @rating %> | <%= @island.location %>
-          </div>
-          <div class="info-right">
-            <i class="far fa-share-square"></i> Share | <i class="far fa-heart"></i> Save
+              </div>
+
+            </div>
+
+            <div class="secondary d-flex">
+
+              <div class="left">
+                <div class="owner d-flex justify-content-between">
+                  <h4> Owner: <%= @name %> </h4> <%= image_tag("4.jpeg",width: 40, height: 40, class: 'avatar') %>
+                </div>
+
+                <div class="extra">
+                  <p> <i class="fas fa-search"></i> Location: <%= @island.location %> </p>
+                  <p> Price: <%= @island.price %>€ </p>
+                  <p> <%= @island.description%> </p>
+                  <br>
+                  <h4>Services:</h4>
+                  <ul>
+                    <li><i class="fas fa-key"></i> Key on hand</li>
+                    <li><i class="fas fa-wifi"></i> Wifi</li>
+                    <li><i class="fas fa-landmark"></i> Monuments on site</li>
+                    <li><i class="fas fa-plane-arrival"></i> Arrival on the island</li>
+                    <li><i class="fab fa-accessible-icon"></i> Accessible</li>
+                    <li><i class="fas fa-dog"></i> Animal friendly</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="comments">
+            </div>
+            <div id="map"
+              style="width: 810px; height: 100vh;"
+              data-markers="<%= @markers.to_json %>"
+              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="pictures d-flex">
-        <div class="main-picture">
-
-          <% if @island.photo.attached? %>
-            <%= cl_image_tag @island.photo.key, height: 300, width: 400, crop: :fill %>
-          <% else %>
-            <%= image_tag("Bora.jpeg",
-            width: 400, height: 300, crop: :fill) %>
-          <% end %>
-
-        </div>
-
-        <div class="secondary-pictures ">
-          <%= image_tag("bora-2.jpeg",
-          width: 400, height: 145, crop: :fill, class: 'secondary-pict-up') %>
-          <%= image_tag("bora-3.jpeg",
-          width: 400, height: 145, crop: :fill, class: 'secondary-pict-down') %>
-        </div>
-      </div>
-
-      <div class="secondary d-flex">
-
-        <div class="left">
-          <div class="owner d-flex justify-content-between">
-            <h4> Owner: <%= @name %> </h4> <%= image_tag("4.jpeg",width: 40, height: 40, class: 'avatar') %>
           </div>
-
-          <div class="extra">
-            <p> <i class="fas fa-search"></i> Location: <%= @island.location %> </p>
-            <p> Price: <%= @island.price %>€ </p>
-            <p> <%= @island.description%> </p>
-            <br>
-            <h4>Services:</h4>
-            <ul>
-              <li><i class="fas fa-key"></i> Key on hand</li>
-              <li><i class="fas fa-wifi"></i> Wifi</li>
-              <li><i class="fas fa-landmark"></i> Monuments on site</li>
-              <li><i class="fas fa-plane-arrival"></i> Arrival on the island</li>
-              <li><i class="fab fa-accessible-icon"></i> Accessible</li>
-              <li><i class="fas fa-dog"></i> Animal friendly</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="comments">
-      </div>
-      <div id="map"
-        style="width: 810px; height: 100vh;"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
-    </div>
     <div class="right card m-3">
       <h4 class="text-center">Add dates to see the price</h4>
       <%= simple_form_for [@island, @booking] do |f| %>
@@ -80,6 +93,8 @@
         <%= link_to 'Book now!', new_island_booking_path(@island), class: "btn btn-primary" %>
         <%= link_to 'Back', islands_path, class: 'btn btn' %>
       <% end %> 
+        </div>
+     </div>
     </div>
   </div>
 </div>

@@ -1,10 +1,16 @@
-<div class="container">
-  <%= simple_form_for @island do |f| %>
-  <%= f.input :name %>
-  <%= f.input :location %>
-  <%= f.input :price %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit %>
-  <% end %>
+<div class="background-form">
+  <div class="container">
+    <div class="center">
+      <div class="card-form">
+        <%= simple_form_for @island do |f| %>
+        <%= f.input :name, class:"form" %>
+        <%= f.input :location, class:"form"  %>
+        <%= f.input :price, class:"form"  %>
+        <%= f.input :description, class:"form" %>
+        <%= f.input :photos, as: :file, input_html: {multiple: true} %>
+        <%= f.button :submit, class:"btn-form" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

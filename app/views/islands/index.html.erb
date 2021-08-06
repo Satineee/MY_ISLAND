@@ -14,8 +14,8 @@
 				<%= link_to island_path(island), class:'text-decoration-none' do %>
 					<div class="card-island d-flex">
 						<div class="mr-4">
-							<% if island.photo.attached? %>
-							<%= cl_image_tag island.photo.key, height: 200, width: 300, crop: :fill, class: 'img' %>
+							<% if island.photos.any? %>
+							<%= cl_image_tag island.photos.first.key, height: 200, width: 300, crop: :fill, class: 'img' %>
 							<% end %>
 						</div>
 
