@@ -21,6 +21,7 @@ tom.save
 mauritius = Island.new(name: 'Mauritius', location: 'Mauritius',
                       price: 10000,
                       description: "Mauritius, an Indian Ocean island nation, is known for its beaches, lagoons and reefs. The mountainous interior includes Black River Gorges National Park, with rainforests, waterfalls, hiking trails and wildlife like the flying fox."
+                      ocean: "Indian Ocean"
                       )
 
 mauritius.photo.attach(io: URI.open('https://www.planetdiveholidays.com/blog/wp-content/uploads/sites/3/2016/07/aerial-photo-le-morne-mauritius-e1518086891149.jpg'),
@@ -35,6 +36,7 @@ puts mauritius.name
 tasmania = Island.new(name: 'Tasmania', location: 'Tasmania',
                       price: 12000,
                       description: 'Tasmania, abbreviated as Tas, is an island state of Australia. It is located 240 km to the south of the Australian mainland, separated from it by the Bass Strait.'
+                      ocean: "Pacific Ocean"
                       )
 
 tasmania.photo.attach(io: URI.open('https://bloximages.newyork1.vip.townnews.com/stltoday.com/content/tncms/assets/v3/editorial/c/e6/ce6048b7-a206-5628-9e7f-331aef27b6c3/56f1f554973ff.image.jpg'),
@@ -48,6 +50,7 @@ puts tasmania.name
 bora = Island.new(name: 'Bora Bora', location: 'Bora Bora',
                   price: 9000,
                   description: "Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia. Surrounded by sand-fringed motus (islets) and a turquoise lagoon protected by a coral reef, it’s known for its scuba diving"
+                  ocean: "Pacific Ocean"
                   )
 
 bora.photo.attach(io: URI.open('https://pix8.agoda.net/hotelImages/2311976/0/28f866c007b559024a4833e6ea93217b.jpg'),
@@ -61,6 +64,7 @@ puts bora.name
 fiji = Island.new(name: 'Fiji Islands', location: 'Fiji',
                   price: 9500,
                   description: "Fiji, a country in the South Pacific, is an archipelago of more than 300 islands. It's famed for rugged landscapes, palm-lined beaches and coral reefs with clear lagoons."
+                  ocean: "Pacific Ocean"
                   )
 
 fiji.photo.attach(io: URI.open('https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/Cover-Fiji-In-Decemberepb0310.jpg'),
@@ -74,6 +78,7 @@ puts fiji.name
 hawaii = Island.new(name: 'Hawaii Islands', location: 'Hawaii',
                     price: 10500,
                     description: "The culture of our Hawaiian Islands is steeped in the values of kuleana and aloha."
+                    ocean: "Pacific Ocean"
                     )
 
 hawaii.photo.attach(io: URI.open('https://www.gannett-cdn.com/presto/2020/01/15/USAT/610d28ed-f048-4808-bbef-589bc5ef6cc6-Hawaii.jpg'),
@@ -87,6 +92,7 @@ puts hawaii.name
 shetland = Island.new(name: 'South Shetland Island', location: 'Nelson Island',
                     price: 5000,
                     description: "Nelson Island is an island in the Sunshine Coast region of the South Coast region of British Columbia. It is surrounded by Hotham Sound, Agamemnon Channel, and Malaspina Strait."
+                    ocean: "Atlantic Ocean"
                     )
 
 shetland.photo.attach(io: URI.open('https://img.traveltriangle.com/blog/wp-content/uploads/2017/09/Lankayan.jpg'),
