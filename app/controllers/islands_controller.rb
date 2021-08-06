@@ -60,7 +60,9 @@ class IslandsController < ApplicationController
                                       locals: { island: island })
       }
     end
+    @user = current_user
     @booking = Booking.new
+    authorize @booking
   end
 
   def edit
