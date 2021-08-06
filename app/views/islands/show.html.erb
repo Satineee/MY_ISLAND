@@ -22,7 +22,7 @@
                       <% if @island.photos.first %>
                         <%= cl_image_tag @island.photos.first.key, height: 300, width: 400, crop: :fill %>
                       <% else %>
-                        <%= image_tag("Bora.jpeg", width: 400, height: 300, crop: :fill) %>
+                        <%= image_tag("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhJj0eo-Vj-5e6HgGjsuiCYtcNr7Ixpjr8cA&usqp=CAU", width: 400, height: 300, crop: :fill) %>
                       <% end %>
                     </div>
                     <div class="secondary-pictures ">
@@ -30,13 +30,13 @@
                       <% if @island.photos.second %>
                         <%= cl_image_tag @island.photos.second.key,  width: 400, height: 145, crop: :fill, class: 'secondary-pict-up'%>
                       <% else %>
-                        <%= image_tag("bora-2.jpeg", width: 400, height: 145, crop: :fill, class: 'secondary-pict-up') %>
+                        <%= image_tag("https://media.hrs.com/media/image/2b/f1/0d/Conrad_Bora_Bora_Nui-Anau-Standardzimmer-31-167415.jpg", width: 400, height: 145, crop: :fill, class: 'secondary-pict-up') %>
                       <% end %>
                       <!-- 3rd photo -->
                       <% if @island.photos.third %>
                         <%= cl_image_tag @island.photos.third.key,  width: 400, height: 145, crop: :fill, class: 'secondary-pict-down'%>
                       <% else %>
-                        <%= image_tag("bora-3.jpeg", width: 400, height: 145, crop: :fill, class: 'secondary-pict-down') %>
+                        <%= image_tag("https://www.bestereistijd.nl/uploads/2019/07/4029449-640x360.jpg", width: 400, height: 145, crop: :fill, class: 'secondary-pict-down') %>
                       <% end %>
                     </div>
                   </div>
@@ -47,7 +47,7 @@
 
               <div class="left">
                 <div class="owner d-flex justify-content-between">
-                  <h4> Owner: <%= @name %> </h4> <%= image_tag("brad-pitt.jpeg",width: 40, height: 40, class: 'avatar') %>
+                  <h4> Owner: <%= @name %> </h4> <%= image_tag("https://i2-prod.mirror.co.uk/incoming/article24423595.ece/ALTERNATES/s1200c/0_JS235786688.jpg",width: 40, height: 40, class: 'avatar') %>
                 </div>
 
 
