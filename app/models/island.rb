@@ -8,6 +8,7 @@ class Island < ApplicationRecord
   validates :price, presence: true
   validates :description, presence: true
   validates :photo, presence: true
+  validates :ocean, inclusion: { in: ["Atlantic Ocean", "Arctic Ocean", "Pacific Ocean", "Indian Ocean"] }
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
