@@ -1,0 +1,29 @@
+<%#
+this is the pdf that will be displayed. it is different form user/show.
+to show the difference there are no islands here compared to the show (check the show in browser and check pdf) 
+since the gem does not support bootstrap, we need to redifine the classes in pdf.scss
+%>
+<div class="container">
+  <div class="content">
+    <div class="">
+      <h1>Welcome <%= @name %>! </h1>
+    </div>
+    <div class="users">
+      <div class="details">
+        <p>Name: <%= @name %> </p>
+        <p>Email:  <%= @user.email %> </p>
+      </div>
+      <div class="">
+        <h3>My Bookings</h3>
+        <% @bookings.each_with_index do |booking, index| %>
+          <div class="laters">
+            <h4> Booking <%= index+1 %></h4>
+            <p class="card-text"> Island:  <%= booking.island.name %> </p>
+            <p class="card-text"> Horaire: <%= booking.start_date %> ------ <%= booking.end_date %>.</p>
+            <p class="card-text"> Bill:    <%= booking.total_price %>€</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

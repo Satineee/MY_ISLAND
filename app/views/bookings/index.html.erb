@@ -1,1 +1,12 @@
 <h1>BOOKINGS INDEX HERE</h1>
+<div class="bookings">
+  <h3>My Bookings</h3>
+  <% @bookings.each_with_index do |booking, index| %>
+    <div class="card-body">
+      <h4> Booking <%= index+1 %></h4>
+      <p class="card-text"> Place: <%= booking.island.name %> </p>
+      <p class="card-text">Your booking starts on the  <%= booking.start_date %> and ends on the  <%= booking.end_date %>.</p>
+      <p class="card-text">Your bill is  <%= booking.total_price %>€</p>
+    </div>
+  <% end %>
+</div>
