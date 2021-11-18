@@ -1,0 +1,21 @@
+// here we write the classes used in views/users/bookings.html.erb
+// as you can see, you can use the same class names for the <div> in bookings.html.erb and users/show.html.erb
+// the stylesheets are separate. you can test by using same class name and change background color. :-)
+
+
+.bookings {
+  background-color: salmon;
+}
+
+.laters {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: royalblue;
+}
+
+.details {
+  font-size: x-large;
+  padding: 20px;
+}

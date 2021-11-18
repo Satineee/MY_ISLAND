@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <%# 
+    this page has been created to accomodate the pdf files that will be created
+    since the gem is not compatible with bootstrap we need to create new CSS classes in stylesheets/pdf.scss
+    %>
+    <meta charset='utf-8' />
+    <%= stylesheet_link_tag wicked_pdf_asset_base64("pdf") %>
+    <%# <%= LINK TO THE Stylesheet in assets/stylesheet/pdf.scss which will ONLY BE USED for pdf file %>
+
+    <%# <%= javascript_include_tag wicked_pdf_asset_base64("number_pages") %>
+
+  </head>
+  <body onload='number_pages'>
+    <div id="header">
+    </div>
+    <div id="content">
+      <%= yield %>
+    </div>
+  </body>
+</html>
